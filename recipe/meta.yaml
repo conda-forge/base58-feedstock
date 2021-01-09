@@ -1,5 +1,5 @@
 {% set name = "base58" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/keis/base58/archive/v{{ version }}.tar.gz
-  sha256: 0032771cda7ce0b7e20eab819f8afff470aeca4ca78ac80c7a516ce82b4856ec
+  sha256: b5d38e2521e4b375cd7bb54d59090ad75f9dbca2d5ddbc06ca1a1a9cf7b274c9
 
 build:
   number: 0
