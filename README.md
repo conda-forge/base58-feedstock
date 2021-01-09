@@ -5,11 +5,9 @@ Home: https://github.com/keis/base58
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/base58-feedstock/blob/master/LICENSE.txt)
 
 Summary: Base58 and Base58Check implementation
-
-
 
 Current build status
 ====================
