@@ -1,5 +1,5 @@
 {% set name = "base58" %}
-{% set version = "2.1.0" %}
+{% set version = "1.0.3" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://github.com/keis/base58/archive/v{{ version }}.tar.gz
-  sha256: b5d38e2521e4b375cd7bb54d59090ad75f9dbca2d5ddbc06ca1a1a9cf7b274c9
+  sha256: 88fecb0c786f6a84fb81eebdb418f6deba08b9c9d90f49a180793ead9a0348d9
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - base58 = base58.__main__:main
+    - base58 = base58:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -27,11 +27,16 @@ requirements:
 test:
   imports:
     - base58
+  source_files:
+    - test_base58.py
   commands:
     - pip check
     - base58 --help
+    - pytest test_base58.py
   requires:
     - pip
+    - pytest
+    - PyHamcrest
 
 about:
   home: https://github.com/keis/base58
