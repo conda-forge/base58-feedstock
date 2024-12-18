@@ -11,7 +11,7 @@ source:
   sha256: 5df25ce3b3d2f7e9d5289b2c75ba9e5291b59b1c34f4f7c90df5ae5f87fe5fb9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - base58 = base58.__main__:main
@@ -20,9 +20,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +32,7 @@ test:
     - base58 --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/keis/base58
